@@ -10,7 +10,7 @@ connectDB()
 const app = express()
 
 const corsOptions = {
-  origin: "https://spotbuilder.netlify.app", // frontend URL (React)
+  origin: process.env.FRONTEND_URL, // frontend URL (React)
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   // credentials: true, // if you send cookies or auth headers
